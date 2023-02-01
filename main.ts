@@ -1,6 +1,7 @@
 let faixa = false
 basic.forever(function () {
     if (maqueen.Ultrasonic(PingUnit.Centimeters) < 20 && maqueen.Ultrasonic(PingUnit.Centimeters) != 0) {
+        music.playTone(494, music.beat(BeatFraction.Double))
         faixa = Math.randomBoolean()
         if (faixa == true) {
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 144)
